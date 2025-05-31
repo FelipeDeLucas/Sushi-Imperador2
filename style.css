@@ -40,11 +40,11 @@ body {
   font-size: 16px;
 }
 
-/* HEADER */
+/* HEADER MAIS COMPACTO E MODERNO */
 header {
   background: var(--cor-header-footer);
-  border-bottom: 2px solid var(--cor-principal);
-  box-shadow: 0 2px 12px var(--cor-shadow);
+  border-bottom: 1.5px solid var(--cor-principal);
+  box-shadow: 0 1px 8px var(--cor-shadow);
   padding: 0;
   position: sticky;
   top: 0;
@@ -53,55 +53,57 @@ header {
 .header-content {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 14px 24px 10px 24px;
+  padding: 8px 16px 6px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 12px;
 }
 .logo-area {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
 }
 .logo {
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: #fff;
   object-fit: contain;
-  box-shadow: 0 2px 8px var(--cor-shadow);
+  box-shadow: 0 1px 4px var(--cor-shadow);
 }
 .titulo-jp {
   font-family: 'Noto Sans JP', 'Roboto', sans-serif;
-  font-size: 1.5rem;
-  letter-spacing: 2px;
+  font-size: 1.08rem;
+  letter-spacing: 1px;
+  margin-bottom: 0;
   color: var(--cor-principal);
-  margin-bottom: 2px;
 }
 .slogan {
-  font-size: 0.98rem;
+  font-size: 0.85rem;
   color: var(--cor-principal);
-  opacity: 0.85;
+  opacity: 0.7;
   margin-bottom: 0;
+  margin-top: 0;
 }
 nav {
   display: flex;
-  gap: 14px;
+  gap: 10px;
   align-items: center;
 }
 nav a {
   color: var(--cor-principal);
   font-weight: 700;
-  font-size: 1.02rem;
+  font-size: 0.98rem;
   text-decoration: none;
   letter-spacing: 1px;
   transition: color 0.2s;
-  padding: 8px 0;
+  padding: 6px 0;
   border-bottom: 2px solid transparent;
   display: flex;
   align-items: center;
   gap: 6px;
+  border-radius: 6px;
 }
 nav a:hover, .whatsapp-header:hover span {
   color: var(--cor-destaque);
@@ -111,14 +113,14 @@ nav a:hover, .whatsapp-header:hover span {
   background: var(--cor-whatsapp);
   color: #fff !important;
   border-radius: 8px;
-  padding: 6px 14px 6px 10px;
+  padding: 5px 10px 5px 8px;
   font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 6px;
   transition: background 0.2s, color 0.2s;
   border: none;
-  font-size: 1.01rem;
+  font-size: 0.98rem;
 }
 .whatsapp-header:hover {
   background: var(--cor-whatsapp-hover);
@@ -127,11 +129,13 @@ nav a:hover, .whatsapp-header:hover span {
 #toggle-theme {
   background: none;
   border: none;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   cursor: pointer;
   margin-left: 6px;
   color: var(--cor-principal);
   transition: color 0.2s;
+  border-radius: 6px;
+  padding: 6px;
 }
 #toggle-theme:hover {
   color: var(--cor-destaque);
@@ -143,15 +147,15 @@ nav a:hover, .whatsapp-header:hover span {
   align-items: center;
   gap: 40px;
   max-width: 1000px;
-  margin: 48px auto 36px auto;
+  margin: 36px auto 28px auto;
   background: var(--cor-card);
   border-radius: 22px;
   box-shadow: 0 6px 24px var(--cor-shadow);
-  padding: 36px 24px;
+  padding: 28px 18px;
 }
 .sobre-img img {
-  width: 260px;
-  height: 195px;
+  width: 220px;
+  height: 160px;
   object-fit: cover;
   border-radius: 14px;
   box-shadow: 0 2px 12px var(--cor-shadow);
@@ -159,16 +163,16 @@ nav a:hover, .whatsapp-header:hover span {
   background: #eee;
 }
 .sobre-texto h2 {
-  font-size: 1.35rem;
+  font-size: 1.18rem;
   color: var(--cor-principal);
   font-family: 'Noto Sans JP', 'Roboto', sans-serif;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 .sobre-texto p {
-  font-size: 1.08rem;
+  font-size: 1.01rem;
   color: var(--cor-texto);
   line-height: 1.7;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 .destaques {
   list-style: none;
@@ -176,45 +180,45 @@ nav a:hover, .whatsapp-header:hover span {
   margin: 0;
 }
 .destaques li {
-  font-size: 1.01rem;
-  margin-bottom: 5px;
+  font-size: 0.98rem;
+  margin-bottom: 4px;
 }
 
 /* CARDÁPIO */
 .cardapio-section {
   max-width: 1100px;
-  margin: 0 auto 36px auto;
+  margin: 0 auto 28px auto;
   background: var(--cor-card);
   border-radius: 22px;
   box-shadow: 0 6px 24px var(--cor-shadow);
-  padding: 36px 24px;
+  padding: 28px 18px;
 }
 .cardapio-section h2 {
-  font-size: 1.35rem;
+  font-size: 1.18rem;
   color: var(--cor-principal);
   font-family: 'Noto Sans JP', 'Roboto', sans-serif;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   text-align: center;
 }
 .filtros-cardapio {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   flex-wrap: wrap;
 }
 .filtro-btn {
   background: var(--cor-card);
   border: 2px solid var(--cor-principal);
   color: var(--cor-principal);
-  padding: 8px 18px;
+  padding: 7px 14px;
   border-radius: 8px;
   font-weight: 700;
-  font-size: 1.01rem;
+  font-size: 0.98rem;
   cursor: pointer;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 8px var(--cor-shadow);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 .filtro-btn.ativo,
 .filtro-btn:hover {
@@ -224,15 +228,15 @@ nav a:hover, .whatsapp-header:hover span {
 }
 .cardapio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  margin-bottom: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+  margin-bottom: 18px;
 }
 .item {
   background: var(--cor-card);
   border-radius: 14px;
   box-shadow: 0 4px 16px var(--cor-shadow);
-  padding: 18px 10px 14px 10px;
+  padding: 14px 8px 10px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -240,15 +244,15 @@ nav a:hover, .whatsapp-header:hover span {
   position: relative;
 }
 .item-img-wrap {
-  width: 180px;
-  height: 135px;
+  width: 120px;
+  height: 90px;
   background: #f5f5f5;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   box-shadow: 0 2px 8px var(--cor-shadow);
 }
 .item-img-wrap img {
@@ -258,17 +262,17 @@ nav a:hover, .whatsapp-header:hover span {
   display: block;
 }
 .item h3 {
-  font-size: 1.08rem;
-  margin-bottom: 6px;
+  font-size: 1.01rem;
+  margin-bottom: 4px;
   font-family: 'Noto Sans JP', 'Roboto', sans-serif;
   color: var(--cor-principal);
   text-align: center;
 }
 .preco {
-  font-size: 1.01rem;
+  font-size: 0.98rem;
   color: var(--cor-texto);
   font-weight: 700;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   display: block;
 }
 .detalhes-btn {
@@ -276,12 +280,12 @@ nav a:hover, .whatsapp-header:hover span {
   border: 1.5px solid var(--cor-principal);
   color: var(--cor-principal);
   border-radius: 7px;
-  padding: 6px 14px;
+  padding: 5px 10px;
   font-weight: 700;
   cursor: pointer;
   margin-bottom: 0;
   transition: background 0.2s, color 0.2s;
-  font-size: 0.98rem;
+  font-size: 0.95rem;
 }
 .detalhes-btn:hover,
 .item.ativo .detalhes-btn {
@@ -293,9 +297,9 @@ nav a:hover, .whatsapp-header:hover span {
   background: var(--cor-card);
   border: 1px solid #eee;
   border-radius: 7px;
-  padding: 10px;
-  margin-top: 7px;
-  font-size: 0.97rem;
+  padding: 8px;
+  margin-top: 5px;
+  font-size: 0.95rem;
   color: var(--cor-texto);
   box-shadow: 0 2px 8px var(--cor-shadow);
   text-align: center;
@@ -309,25 +313,25 @@ nav a:hover, .whatsapp-header:hover span {
   background: var(--cor-bg);
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--cor-shadow);
-  padding: 18px;
+  padding: 14px;
   max-width: 340px;
-  margin: 24px auto 0 auto;
+  margin: 18px auto 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 .pedido-form h3 {
   font-family: 'Noto Sans JP', 'Roboto', sans-serif;
   color: var(--cor-principal);
-  font-size: 1.08rem;
-  margin-bottom: 4px;
+  font-size: 1.01rem;
+  margin-bottom: 2px;
 }
 .pedido-form input,
 .pedido-form textarea {
   border: 1.2px solid var(--cor-principal);
   border-radius: 7px;
-  padding: 8px;
-  font-size: 1rem;
+  padding: 7px;
+  font-size: 0.98rem;
   background: #fff;
   transition: border 0.2s;
 }
@@ -342,9 +346,9 @@ nav a:hover, .whatsapp-header:hover span {
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 8px 18px;
+  padding: 7px 14px;
   font-weight: 700;
-  font-size: 1.01rem;
+  font-size: 0.98rem;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
@@ -356,48 +360,48 @@ nav a:hover, .whatsapp-header:hover span {
 /* CONTATO */
 .contato-section {
   max-width: 1000px;
-  margin: 0 auto 36px auto;
+  margin: 0 auto 28px auto;
   background: var(--cor-card);
   border-radius: 22px;
   box-shadow: 0 6px 24px var(--cor-shadow);
-  padding: 36px 24px;
+  padding: 28px 18px;
 }
 .contato-section h2 {
-  font-size: 1.35rem;
+  font-size: 1.18rem;
   color: var(--cor-principal);
   font-family: 'Noto Sans JP', 'Roboto', sans-serif;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   text-align: center;
 }
 .contato-info {
   display: flex;
-  gap: 24px;
+  gap: 18px;
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 .contato-info > div {
-  flex: 1 1 220px;
-  font-size: 1.01rem;
+  flex: 1 1 180px;
+  font-size: 0.98rem;
 }
 .contato-info a {
   color: var(--cor-principal);
   text-decoration: underline;
 }
 .contato-info iframe {
-  flex: 1 1 280px;
-  min-width: 220px;
-  height: 160px;
+  flex: 1 1 220px;
+  min-width: 140px;
+  height: 110px;
   border: none;
   border-radius: 10px;
   box-shadow: 0 2px 8px var(--cor-shadow);
 }
 .redes {
   display: flex;
-  gap: 14px;
+  gap: 10px;
   justify-content: center;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 .redes img {
   filter: grayscale(0.2);
@@ -408,48 +412,51 @@ nav a:hover, .whatsapp-header:hover span {
   transform: scale(1.1);
 }
 
-/* FOOTER */
+/* FOOTER MAIS LIMPO E PROPORCIONAL */
 footer {
   background: var(--cor-header-footer);
-  border-top: 2px solid var(--cor-principal);
+  border-top: 1.5px solid var(--cor-principal);
   color: var(--cor-principal);
   text-align: center;
-  font-size: 1.01rem;
+  font-size: 0.98rem;
   letter-spacing: 1px;
-  box-shadow: 0 -2px 8px var(--cor-shadow);
+  box-shadow: 0 -1px 6px var(--cor-shadow);
   padding: 0;
 }
 .footer-content {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 14px 10px 10px 10px;
+  padding: 10px 8px 6px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-family: 'Noto Sans JP', 'Roboto', sans-serif;
-  font-size: 1.08rem;
+  gap: 6px;
+  font-size: 1rem;
   font-weight: 700;
+}
+.footer-logo img {
+  width: 22px;
+  height: 22px;
 }
 .footer-links {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   align-items: center;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 .footer-links a {
   color: var(--cor-principal);
   text-decoration: none;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.97rem;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
   transition: color 0.2s;
 }
 .footer-links a:hover {
@@ -459,8 +466,8 @@ footer {
   margin: 0;
   font-weight: 500;
   color: var(--cor-principal);
-  font-size: 0.98rem;
-  opacity: 0.8;
+  font-size: 0.93rem;
+  opacity: 0.7;
 }
 
 /* MELHORIAS DE TOQUE E FLUIDEZ */
@@ -478,145 +485,145 @@ footer {
   .header-content, .sobre, .cardapio-section, .contato-section {
     flex-direction: column;
     align-items: center;
-    padding: 18px 6vw;
-    gap: 18px;
+    padding: 14px 6vw;
+    gap: 12px;
   }
   .header-content {
-    gap: 10px;
-    padding: 10px 6vw 8px 6vw;
+    gap: 8px;
+    padding: 6px 6vw 4px 6vw;
   }
   nav {
-    gap: 8px;
+    gap: 6px;
     flex-wrap: wrap;
   }
   .footer-content {
-    padding: 10px 4vw 6px 4vw;
+    padding: 8px 4vw 4px 4vw;
   }
   .sobre-img img {
-    width: 90vw;
-    max-width: 260px;
-    height: 180px;
+    width: 80vw;
+    max-width: 220px;
+    height: 120px;
   }
   .item-img-wrap {
-    width: 140px;
-    height: 105px;
+    width: 90px;
+    height: 65px;
   }
   .contato-info {
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
   }
   .contato-info iframe {
     width: 100%;
     min-width: unset;
-    height: 120px;
+    height: 80px;
   }
 }
 @media (max-width: 600px) {
   .header-content, .sobre, .cardapio-section, .contato-section {
-    padding: 10px 2vw;
-    gap: 8px;
+    padding: 6px 2vw;
+    gap: 6px;
   }
   .logo {
-    width: 36px;
-    height: 36px;
+    width: 22px;
+    height: 22px;
   }
   .titulo-jp {
-    font-size: 1rem;
+    font-size: 0.93rem;
   }
   .footer-content {
-    padding: 8px 2vw 4px 2vw;
-    gap: 4px;
+    padding: 4px 2vw 2px 2vw;
+    gap: 2px;
   }
   .footer-logo img {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
   }
   .footer-logo {
-    font-size: 0.98rem;
+    font-size: 0.9rem;
   }
   .footer-links {
-    gap: 6px;
-    font-size: 0.95rem;
+    gap: 3px;
+    font-size: 0.93rem;
   }
   .item-img-wrap {
-    width: 100px;
-    height: 75px;
+    width: 70px;
+    height: 50px;
   }
   nav {
     flex-direction: column;
     align-items: stretch;
-    gap: 4px;
+    gap: 2px;
   }
   nav a, .whatsapp-header, #toggle-theme {
-    font-size: 0.98rem;
-    padding: 10px 0;
+    font-size: 0.95rem;
+    padding: 7px 0;
     width: 100%;
     justify-content: flex-start;
     border-bottom: none;
-    border-radius: 6px;
+    border-radius: 5px;
   }
   .whatsapp-header {
-    padding: 8px 10px;
-    font-size: 1rem;
-    gap: 8px;
+    padding: 6px 8px;
+    font-size: 0.97rem;
+    gap: 6px;
   }
   .filtros-cardapio {
     flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 18px;
+    gap: 6px;
+    margin-bottom: 10px;
   }
   .filtro-btn {
     flex: 1 1 40%;
-    min-width: 120px;
-    font-size: 1rem;
-    padding: 10px 0;
+    min-width: 90px;
+    font-size: 0.97rem;
+    padding: 7px 0;
     margin: 0;
   }
   .cardapio {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 10px;
   }
   .item {
-    padding: 14px 4vw 10px 4vw;
+    padding: 10px 4vw 7px 4vw;
     min-width: 0;
   }
   .pedido-form {
     max-width: 100%;
-    padding: 12px 2vw;
-    gap: 8px;
+    padding: 8px 2vw;
+    gap: 6px;
   }
   .pedido-form input,
   .pedido-form textarea {
-    font-size: 0.98rem;
-    padding: 8px;
+    font-size: 0.95rem;
+    padding: 6px;
   }
   .pedido-form button {
     width: 100%;
-    font-size: 1.01rem;
-    padding: 10px 0;
+    font-size: 0.97rem;
+    padding: 8px 0;
     align-self: stretch;
   }
   .sobre-img img {
     width: 100vw;
     max-width: 100%;
     height: auto;
-    min-height: 120px;
+    min-height: 70px;
   }
   .sobre {
-    gap: 8px;
-    padding: 10px 2vw;
+    gap: 6px;
+    padding: 6px 2vw;
   }
   .sobre-texto h2,
   .cardapio-section h2,
   .contato-section h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: center;
   }
   .redes img {
-    width: 32px !important;
-    height: 32px !important;
+    width: 24px !important;
+    height: 24px !important;
   }
   .contato-info > div {
-    font-size: 0.98rem;
+    font-size: 0.93rem;
   }
 }
