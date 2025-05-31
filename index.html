@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sushi Imperador</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo-area">
+        <img src="Imagens/logo-sushi.png" alt="Logo Sushi Imperador" class="logo" />
+        <div>
+          <h1 class="titulo-jp">Sushi Imperador</h1>
+          <p class="slogan">A tradição japonesa em cada detalhe</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#contato">Contato</a>
+        <a href="https://wa.me/SEUNUMEROAQUI" class="whatsapp-header" target="_blank" aria-label="WhatsApp">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="22" height="22" />
+          <span>Pedir no WhatsApp</span>
+        </a>
+        <button id="toggle-theme" aria-label="Alternar modo escuro/claro">
+          <span id="theme-icon">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre" class="sobre">
+      <div class="sobre-img">
+        <img src="Imagens/pexels-chevanon-359993.jpg" alt="Prato de sushi elegante" />
+      </div>
+      <div class="sobre-texto">
+        <h2>Sobre nós</h2>
+        <p>
+          No Sushi Imperador, cada prato é uma homenagem à culinária japonesa. Ingredientes frescos, ambiente sofisticado e atendimento impecável para tornar sua experiência inesquecível.
+        </p>
+        <ul class="destaques">
+          <li>🍣 Ingredientes selecionados</li>
+          <li>🥢 Ambiente acolhedor</li>
+          <li>👨‍🍳 Chefs especializados</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="cardapio" class="cardapio-section">
+      <h2>Cardápio</h2>
+      <div class="filtros-cardapio">
+        <button class="filtro-btn ativo" data-categoria="todos">Todos</button>
+        <button class="filtro-btn" data-categoria="sushi">Sushis</button>
+        <button class="filtro-btn" data-categoria="temaki">Temakis</button>
+        <button class="filtro-btn" data-categoria="combo">Combos</button>
+      </div>
+      <div class="cardapio">
+        <div class="item" data-categoria="temaki">
+          <div class="item-img-wrap">
+            <img src="Imagens/pexels-amar-12032535.jpg" alt="Temaki Salmão" />
+          </div>
+          <h3>Temaki Salmão</h3>
+          <span class="preco">R$ 22,90</span>
+          <button class="detalhes-btn" aria-label="Ver detalhes do Temaki Salmão">Detalhes</button>
+          <div class="detalhes-modal">
+            Temaki de salmão fresco, arroz temperado, nori crocante e cebolinha.
+          </div>
+        </div>
+        <div class="item" data-categoria="combo">
+          <div class="item-img-wrap">
+            <img src="Imagens/pexels-valeriya-1028427.jpg" alt="Combinado 20 peças" />
+          </div>
+          <h3>Combinado 20 peças</h3>
+          <span class="preco">R$ 49,90</span>
+          <button class="detalhes-btn" aria-label="Ver detalhes do Combinado 20 peças">Detalhes</button>
+          <div class="detalhes-modal">
+            8 sushis variados, 8 sashimis, 4 hot rolls. Ingredientes frescos selecionados.
+          </div>
+        </div>
+        <div class="item" data-categoria="sushi">
+          <div class="item-img-wrap">
+            <img src="Imagens/pexels-ivan-samkov-8951571.jpg" alt="Hot Roll" />
+          </div>
+          <h3>Hot Roll</h3>
+          <span class="preco">R$ 19,90</span>
+          <button class="detalhes-btn" aria-label="Ver detalhes do Hot Roll">Detalhes</button>
+          <div class="detalhes-modal">
+            Hot roll de salmão com cream cheese, empanado e crocante.
+          </div>
+        </div>
+      </div>
+      <form class="pedido-form">
+        <h3>Pedido rápido</h3>
+        <input type="text" placeholder="Seu nome" required>
+        <input type="tel" placeholder="Telefone" required>
+        <textarea placeholder="Seu pedido (ex: 1 Temaki, 1 Combo 20 peças)" required></textarea>
+        <button type="submit" class="botao">Enviar Pedido</button>
+      </form>
+    </section>
+
+    <section id="contato" class="contato-section">
+      <h2>Localização & Contato</h2>
+      <div class="contato-info">
+        <div>
+          <p><strong>Endereço:</strong> Rua Exemplo, 123 – Bairro Sushi</p>
+          <p><strong>Telefone:</strong> <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+          <p><strong>E-mail:</strong> <a href="mailto:contato@sushiimperador.com">contato@sushiimperador.com</a></p>
+          <p><strong>Horário:</strong> Todos os dias, das 18h às 23h</p>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18..." loading="lazy" title="Mapa Sushi Imperador"></iframe>
+      </div>
+      <div class="redes">
+        <a href="https://wa.me/SEUNUMEROAQUI" target="_blank" aria-label="WhatsApp">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="40" />
+        </a>
+        <a href="https://instagram.com/sushiimperador" target="_blank" aria-label="Instagram">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="40" />
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="Imagens/logo-sushi.png" alt="Logo Sushi Imperador" width="40" height="40" />
+        <span>Sushi Imperador</span>
+      </div>
+      <div class="footer-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#contato">Contato</a>
+        <a href="https://wa.me/SEUNUMEROAQUI" target="_blank" aria-label="WhatsApp">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20" height="20" />
+        </a>
+        <a href="https://instagram.com/sushiimperador" target="_blank" aria-label="Instagram">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="20" height="20" />
+        </a>
+      </div>
+      <p>&copy; 2025 Sushi Imperador. Criado por Felipe.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
