@@ -22,13 +22,22 @@ body.dark-mode {
   --cor-shadow: rgba(0,0,0,0.25);
 }
 
-/* FUNDO */
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
   min-height: 100vh;
   background: var(--cor-bg);
   color: var(--cor-texto);
   font-family: 'Roboto', sans-serif;
   transition: background 0.3s, color 0.3s;
+  font-size: 16px;
 }
 
 /* HEADER */
@@ -192,6 +201,7 @@ nav a:hover, .whatsapp-header:hover span {
   gap: 12px;
   justify-content: center;
   margin-bottom: 24px;
+  flex-wrap: wrap;
 }
 .filtro-btn {
   background: var(--cor-card);
@@ -204,6 +214,7 @@ nav a:hover, .whatsapp-header:hover span {
   cursor: pointer;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 8px var(--cor-shadow);
+  margin-bottom: 4px;
 }
 .filtro-btn.ativo,
 .filtro-btn:hover {
@@ -291,31 +302,6 @@ nav a:hover, .whatsapp-header:hover span {
 }
 .item.ativo .detalhes-modal {
   display: block;
-}
-
-/* BOTÃO WHATSAPP */
-.botao-whatsapp {
-  background: var(--cor-whatsapp);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.08rem;
-  font-weight: 700;
-  border: none;
-  border-radius: 12px;
-  padding: 12px 28px;
-  box-shadow: 0 4px 16px var(--cor-shadow);
-  transition: background 0.2s, transform 0.2s;
-  text-align: center;
-  text-decoration: none;
-  margin: 18px auto 0 auto;
-  width: fit-content;
-}
-.botao-whatsapp:hover {
-  background: var(--cor-whatsapp-hover);
-  color: #fff;
-  transform: translateY(-2px) scale(1.04);
 }
 
 /* FORMULÁRIO */
@@ -477,6 +463,16 @@ footer {
   opacity: 0.8;
 }
 
+/* MELHORIAS DE TOQUE E FLUIDEZ */
+.filtro-btn,
+.detalhes-btn,
+.pedido-form button,
+.whatsapp-header {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
 /* RESPONSIVIDADE */
 @media (max-width: 900px) {
   .header-content, .sobre, .cardapio-section, .contato-section {
@@ -545,5 +541,82 @@ footer {
   .item-img-wrap {
     width: 100px;
     height: 75px;
+  }
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+  nav a, .whatsapp-header, #toggle-theme {
+    font-size: 0.98rem;
+    padding: 10px 0;
+    width: 100%;
+    justify-content: flex-start;
+    border-bottom: none;
+    border-radius: 6px;
+  }
+  .whatsapp-header {
+    padding: 8px 10px;
+    font-size: 1rem;
+    gap: 8px;
+  }
+  .filtros-cardapio {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .filtro-btn {
+    flex: 1 1 40%;
+    min-width: 120px;
+    font-size: 1rem;
+    padding: 10px 0;
+    margin: 0;
+  }
+  .cardapio {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .item {
+    padding: 14px 4vw 10px 4vw;
+    min-width: 0;
+  }
+  .pedido-form {
+    max-width: 100%;
+    padding: 12px 2vw;
+    gap: 8px;
+  }
+  .pedido-form input,
+  .pedido-form textarea {
+    font-size: 0.98rem;
+    padding: 8px;
+  }
+  .pedido-form button {
+    width: 100%;
+    font-size: 1.01rem;
+    padding: 10px 0;
+    align-self: stretch;
+  }
+  .sobre-img img {
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
+    min-height: 120px;
+  }
+  .sobre {
+    gap: 8px;
+    padding: 10px 2vw;
+  }
+  .sobre-texto h2,
+  .cardapio-section h2,
+  .contato-section h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .redes img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .contato-info > div {
+    font-size: 0.98rem;
   }
 }
