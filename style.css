@@ -4,15 +4,15 @@
 
 /* === Paleta e Variáveis Harmônicas === */
 :root {
-  --cor-principal: #b23a48;           /* Vermelho fechado */
-  --cor-destaque: #f7c873;            /* Dourado suave */
-  --cor-header-footer: #fffaf6;       /* Quase branco, quente */
-  --cor-texto: #2d2d2d;               /* Cinza escuro */
-  --cor-bg: #f9f6f2;                  /* Fundo claro, quente */
-  --cor-card: #fff;                   /* Branco para cards */
-  --cor-whatsapp: #25d366;            /* Verde WhatsApp */
-  --cor-whatsapp-hover: #1ea654;      /* Verde hover harmônico */
-  --cor-shadow: rgba(50,30,30,0.08);  /* Sombra suave */
+  --cor-principal: #b23a48;
+  --cor-destaque: #f7c873;
+  --cor-header-footer: #fffaf6;
+  --cor-texto: #2d2d2d;
+  --cor-bg: #f9f6f2;
+  --cor-card: #fff;
+  --cor-whatsapp: #25d366;
+  --cor-whatsapp-hover: #1ea654;
+  --cor-shadow: rgba(50,30,30,0.08);
   --cor-overlay: rgba(0,0,0,0.45);
 }
 body.dark-mode {
@@ -135,10 +135,9 @@ body {
 }
 .nav-links a:hover,
 .nav-links a:focus {
-  background: rgba(178,58,72,0.08); /* harmonizado com o novo vermelho */
+  background: rgba(178,58,72,0.08);
   color: var(--cor-destaque);
 }
-/* Botão WhatsApp do header - verde harmônico */
 .whatsapp-header {
   background: var(--cor-whatsapp);
   color: #fff;
@@ -512,23 +511,6 @@ body {
   box-shadow: 0 2px 8px var(--cor-shadow);
   margin-left: 24px;
 }
-@media (max-width: 900px) {
-  .contato-info {
-    flex-direction: column;
-    gap: 18px;
-    padding: 16px 6vw;
-  }
-  .contato-info > div {
-    border-right: none;
-    border-bottom: 2px solid var(--cor-shadow);
-    padding-right: 0;
-    padding-bottom: 18px;
-    margin-bottom: 10px;
-  }
-  .contato-info iframe {
-    margin-left: 0;
-  }
-}
 .redes {
   display: flex;
   gap: 18px;
@@ -599,10 +581,9 @@ footer {
 }
 .footer-links a:hover,
 .footer-links a:focus {
-  background: rgba(178,58,72,0.08); /* harmonizado com o novo vermelho */
+  background: rgba(178,58,72,0.08);
   color: var(--cor-destaque);
 }
-/* Botão WhatsApp do footer - verde harmônico */
 .footer-links .whatsapp-footer {
   background: var(--cor-whatsapp);
   color: #fff;
@@ -628,7 +609,6 @@ footer {
   font-size: 0.95rem;
   opacity: 0.7;
 }
-/* Separação visual entre linhas do footer */
 .footer-content > *:not(:first-child) {
   border-top: 1px solid var(--cor-shadow);
   margin-top: 10px;
