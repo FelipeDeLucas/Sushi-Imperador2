@@ -765,16 +765,15 @@ footer {
 
 .contato-info iframe {
   display: block;
-  margin: 24px auto 24px auto;
+  margin: 0 auto;
   width: 100%;
-  max-width: 650px;
-  min-width: 220px;
+  max-width: 400px;
   aspect-ratio: 16/9;
   height: auto;
-  min-height: 180px;
-  max-height: 350px;
-  border-radius: 20px;
-  box-shadow: 0 4px 32px var(--cor-shadow);
+  min-height: 160px;
+  max-height: 260px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px var(--cor-shadow);
   background: #eee;
   border: none;
 }

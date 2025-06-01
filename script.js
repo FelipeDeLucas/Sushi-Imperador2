@@ -1,14 +1,31 @@
-// Navbar responsiva (hambúrguer)
+// Menu mobile acessível
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.getElementById('nav-links');
-if (navToggle) {
+if (navToggle && navLinks) {
   navToggle.addEventListener('click', function () {
     const expanded = navLinks.classList.toggle('ativo');
     navToggle.setAttribute('aria-expanded', expanded);
   });
 }
 
-// Filtro do cardápio
+// Tema claro/escuro com persistência
+const themeBtn = document.getElementById('toggle-theme');
+const themeIcon = document.getElementById('theme-icon');
+function setTheme(dark) {
+  document.body.classList.toggle('dark-mode', dark);
+  if (themeIcon) themeIcon.textContent = dark ? '☀️' : '🌙';
+  localStorage.setItem('sushi-theme', dark ? 'dark' : 'light');
+}
+if (themeBtn && themeIcon) {
+  // Inicializa tema salvo
+  const saved = localStorage.getItem('sushi-theme');
+  setTheme(saved === 'dark');
+  themeBtn.addEventListener('click', () => {
+    setTheme(!document.body.classList.contains('dark-mode'));
+  });
+}
+
+// Filtro do cardápio acessível
 document.querySelectorAll('.filtro-btn').forEach(btn => {
   btn.addEventListener('click', function () {
     document.querySelectorAll('.filtro-btn').forEach(b => {
@@ -19,20 +36,18 @@ document.querySelectorAll('.filtro-btn').forEach(btn => {
     this.setAttribute('aria-selected', 'true');
     const categoria = this.dataset.categoria;
     document.querySelectorAll('.cardapio .item').forEach(item => {
-      if (categoria === 'todos' || item.dataset.categoria === categoria) {
-        item.style.display = '';
-      } else {
-        item.style.display = 'none';
-      }
+      item.style.display = (categoria === 'todos' || item.dataset.categoria === categoria) ? '' : 'none';
     });
   });
 });
 
-// Modal de detalhes com overlay
-const overlay = document.createElement('div');
-overlay.className = 'modal-overlay';
-document.body.appendChild(overlay);
-
+// Modal de detalhes com overlay e acessibilidade
+let overlay = document.querySelector('.modal-overlay');
+if (!overlay) {
+  overlay = document.createElement('div');
+  overlay.className = 'modal-overlay';
+  document.body.appendChild(overlay);
+}
 document.querySelectorAll('.detalhes-btn').forEach(btn => {
   btn.addEventListener('click', function () {
     const item = this.closest('.item');
@@ -56,45 +71,28 @@ overlay.addEventListener('click', () => {
   document.querySelectorAll('.item').forEach(i => i.classList.remove('ativo'));
   overlay.classList.remove('ativo');
 });
+// Fechar modal com ESC
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.item').forEach(i => i.classList.remove('ativo'));
+    overlay.classList.remove('ativo');
+  }
+});
 
-// Formulário de pedido (apenas exibe alerta)
+// Formulário de pedido (exemplo simples)
 document.querySelector('.pedido-form')?.addEventListener('submit', function (e) {
   e.preventDefault();
   alert('Pedido enviado! Entraremos em contato em breve.');
   this.reset();
 });
 
-// Dark/Light mode toggle
-const btn = document.getElementById('toggle-theme');
-const icon = document.getElementById('theme-icon');
-function setTheme(dark) {
-  document.body.classList.toggle('dark-mode', dark);
-  icon.textContent = dark ? '☀️' : '🌙';
-  localStorage.setItem('sushi-theme', dark ? 'dark' : 'light');
-}
-btn.addEventListener('click', () => {
-  setTheme(!document.body.classList.contains('dark-mode'));
-});
-if (localStorage.getItem('sushi-theme') === 'dark') setTheme(true);
-
 // Botão voltar ao topo
-const voltarTopo = document.getElementById('voltar-topo');
-function mostrarSetaTopo() {
-  // Sempre mostra no mobile, só mostra no desktop se scroll > 200
-  if (window.innerWidth <= 700) {
-    voltarTopo.style.display = 'block';
-  } else {
-    if (window.scrollY > 200) {
-      voltarTopo.style.display = 'block';
-    } else {
-      voltarTopo.style.display = 'none';
-    }
-  }
-}
-window.addEventListener('scroll', mostrarSetaTopo);
-window.addEventListener('resize', mostrarSetaTopo);
-document.addEventListener('DOMContentLoaded', mostrarSetaTopo);
-
-voltarTopo.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+const btnTopo = document.getElementById('voltar-topo');
+window.addEventListener('scroll', () => {
+  if (btnTopo) btnTopo.style.display = window.scrollY > 300 ? 'block' : 'none';
 });
+if (btnTopo) {
+  btnTopo.addEventListener('click', () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+}
