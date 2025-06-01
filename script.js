@@ -79,13 +79,22 @@ if (localStorage.getItem('sushi-theme') === 'dark') setTheme(true);
 
 // Botão voltar ao topo
 const voltarTopo = document.getElementById('voltar-topo');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 200) {
+function mostrarSetaTopo() {
+  // Sempre mostra no mobile, só mostra no desktop se scroll > 200
+  if (window.innerWidth <= 700) {
     voltarTopo.style.display = 'block';
   } else {
-    voltarTopo.style.display = 'none';
+    if (window.scrollY > 200) {
+      voltarTopo.style.display = 'block';
+    } else {
+      voltarTopo.style.display = 'none';
+    }
   }
-});
+}
+window.addEventListener('scroll', mostrarSetaTopo);
+window.addEventListener('resize', mostrarSetaTopo);
+document.addEventListener('DOMContentLoaded', mostrarSetaTopo);
+
 voltarTopo.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
