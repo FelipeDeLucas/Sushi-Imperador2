@@ -769,13 +769,20 @@ footer {
   width: 100%;
   max-width: 400px;
   aspect-ratio: 16/9;
-  height: auto;
-  min-height: 160px;
+  min-height: 180px;
   max-height: 260px;
   border-radius: 16px;
-  box-shadow: 0 2px 12px var(--cor-shadow);
+  box-shadow: 0 2px 12px var(--gold);
   background: #eee;
   border: none;
+}
+@media (max-width: 600px) {
+  .contato-info iframe {
+    max-width: 98vw;
+    min-width: 0;
+    height: 140px;
+    border-radius: 10px;
+  }
 }
 
 /* Centralizar e harmonizar o bloco de contato no mobile/tablet */
