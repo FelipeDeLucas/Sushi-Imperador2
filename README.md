@@ -19,4 +19,4 @@ Página estática de exemplo desenvolvida para representar o site de um restaura
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/sushi-imperador.git
+   git clone https://github.com/seu-usuario/Sushi-Imperador2.git
